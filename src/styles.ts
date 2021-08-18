@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import headerBackground from './assets/images/header-background.png';
 
 export const Header = styled.div`
-    /* background: linear-gradient(237deg, #1F1F1F 10%, rgba(12, 12, 12, 0.97) 100%), url(${headerBackground}); */
-    background: linear-gradient(227deg,#171717 10%,rgb(2 2 2 / 97%) 100%), url(${headerBackground});
+    background: -moz-linear-gradient(225deg,#171717 10%,rgb(2 2 2 / 98%) 100%), url(${headerBackground});
+    background: linear-gradient(225deg,#171717 10%,rgb(2 2 2 / 98%) 100%), url(${headerBackground});
+   
+
 
     .header-container{
         min-height: 100vh;
@@ -19,7 +21,7 @@ export const Header = styled.div`
 
         p{
             font-family: 'Source Code Pro', monospace;
-            font-weight: 400;
+            font-weight: 500;
             margin-top: 30px;
         }
 

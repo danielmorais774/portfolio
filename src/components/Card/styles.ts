@@ -5,8 +5,9 @@ export const Container = styled.div`
 
     .image-container{
         position: relative;
-        width: 100%;
-        height: 250px;
+        width: auto;
+        height: auto;
+        max-height: 250px;
         background-color: #cecece;
         border-radius: 10px;
 
@@ -80,6 +81,15 @@ export const Container = styled.div`
 
     img{
         height: 100%;
+        width: 100%;
+    }
+
+    h3{
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 700;
+        font-size: 17px;
+        text-align: start;
+        margin: 10px 0px;
     }
 
     p{
