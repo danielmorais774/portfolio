@@ -112,6 +112,8 @@ export const SectionAbout = styled.div`
         width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
+        max-width: 350px;
+        border-radius: 20px;
     }
 
     h3{

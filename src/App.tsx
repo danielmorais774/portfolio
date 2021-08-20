@@ -3,7 +3,7 @@ import React from 'react';
 import {Header, Navbar, SectionAbout, SectionProjects, SectionContact, Footer} from './styles';
 
 import imageProgrammer from './assets/images/image-programmer.png';
-import imageAbout from './assets/images/image-about.png';
+import imageAbout from './assets/images/image-about.jpg';
 
 import {FaInstagram, FaGithub, FaLinkedin} from 'react-icons/fa';
 import {SiGmail} from 'react-icons/si';
@@ -56,15 +56,17 @@ const App: React.FC = () => {
       <SectionAbout id="section-about">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-md-6" style={{textAlign: 'center'}}>
               <img src={imageAbout} alt="about"/>
             </div>
             <div className="col-12 col-md-6">
               <div>
                 <h3>Sobre mim</h3>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                <p>Olá, eu sou o Daniel, um desenvolvedor Full stack e gamer nas horas vagas rsrs.</p>
+                <p>Sou um grande entusiasta da computação, em especial da área de desenvolvimento. iniciei com 13 anos de idade e fui intensificando meus estudos ao longo dos anos, após cursar o ensino técnico, passei a enxergar a programação como a minha área de atuação profissional.
+                </p>
+                <p>Tenho muita curiosidade e sede por conhecimento. Sou cheio de ideias malucas e sempre ponho aprova meu conhecimento tornando elas em realidade.
+                </p>
               </div>
             </div>
           </div>
@@ -100,8 +102,7 @@ const App: React.FC = () => {
       <SectionContact id="section-contact">
         <div className="container">
           <h3>Contato</h3>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-          </p>
+          <p>Em caso de contato, fique a vontade para usar algum dos meios abaixo.</p>
 
           <div className="row align-items-center">
             <div className="col-md-3 ms-md-auto">
@@ -128,7 +129,7 @@ const App: React.FC = () => {
             <div className="col-md-3 ms-md-auto">
               <a className="item-badge" href="https://mail.google.com/mail/?view=cm&fs=1&to=danielmorais774@gmail.com&su=CONTATO" target="_blank" rel="noopener noreferrer">
                 <SiGmail size={20} color="#E42430"/>
-                <p>danielmorais774</p>
+                <p>danielmorais774@gmail.com</p>
               </a>
             </div>
           </div>
