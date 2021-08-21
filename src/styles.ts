@@ -65,9 +65,9 @@ export const Navbar = styled.div`
     } 
 
     .navbar-title{
-        font-family: 'Patua One', cursive;
+        font-family: 'Source Sans Pro', sans-serif;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 600;
         font-size: 23px;
         line-height: 28px;
         color: #fff;
@@ -108,7 +108,6 @@ export const SectionAbout = styled.div`
     min-height: 700px;
 
     img {
-        max-width: 460px;
         width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -116,10 +115,27 @@ export const SectionAbout = styled.div`
         border-radius: 20px;
     }
 
+    
     h3{
         font-family: 'Source Code Pro', monospace;
         font-weight: 700;
     }
+
+    @media (max-width: 480px) {
+        img {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            max-width: 250px;
+            border-radius: 20px;
+        }
+
+        h3{
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+
 
     p{
         font-family: 'Source Code Pro', monospace;
