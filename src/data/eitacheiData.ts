@@ -16,7 +16,7 @@ const images: string[] = [image1, home, cart, profile, search, product, method, 
 const data: IData = {
     title: 'Eitachei',
     youtube: 'https://www.youtube.com/watch?v=aOqJbmwnyzI',
-    // playstore: 'https://play.google.com/store/apps/details?id=com.dmcode.eitachei',
+    playstore: 'https://play.google.com/store/apps/details?id=com.dmcode.eitacheidemo',
     tools: ['React Native', 'Laravel', 'ReactJS'],
     images: images
 }
