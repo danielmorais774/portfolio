@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-import headerBackground from './assets/images/header-background.png';
+import headerBackground from '../../assets/images/header-background.png';
+
+export const Container = styled.div`
+    background-color: #0F0F0F;
+    color: #fff;
+`;
 
 export const Header = styled.div`
     background: -moz-linear-gradient(225deg,#171717 10%,rgb(2 2 2 / 98%) 100%), url(${headerBackground});
