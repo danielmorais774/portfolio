@@ -1,7 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import { fadeIn, fadeInRight, fadeInUp } from 'react-animations';
+import { fadeInRight, fadeInUp } from 'react-animations';
 
-const fadeInAnimation = keyframes`${fadeIn}`;
 const fadeInRightAnimation = keyframes`${fadeInRight}`;
 const fadeInUpAnimation = keyframes`${fadeInUp}`;
 
@@ -164,37 +163,103 @@ export const Navbar = styled.div`
     font-style: normal;
     font-weight: 600;
     font-size: 23px;
-    line-height: 28px;
+    line-height: 36px;
     margin: 0;
     color: #fff;
   }
 
-  ul {
+  #menu-main {
+    display: flex;
     padding: 0px;
     margin: 0px;
     list-style: none;
-  }
+    gap: 0.5rem;
 
-  @media (max-width: 480px) {
-    ul {
-      display: none;
+    a {
+      display: block;
+      padding: 0.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: "Roboto", sans-serif;
     }
   }
 
-  ul li {
+  #btn-mobile {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .hamburguer {
+      /* width: 20px; */
+      height: 20px;
+    }
+
+    .hamburguer::before, .hamburguer::after {
+      content: '';
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: #fff;
+      transition: 0.6s;
+    }
+
+    .hamburguer::after {
+      margin-top: 7px;
+    }
+
+  }
+
+  @media (max-width: 770px) {
+    #btn-mobile {
+      display: block;
+    }
+
+    .navbar-content.active .hamburguer::before{
+      transform: rotate(135deg);
+    }
+
+    .navbar-content.active .hamburguer::after{
+      transform: rotate(45deg);
+      margin-top: -2px !important;
+    }
+
+    .navbar-content #menu-main {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 0px;
+      width: 100%;
+      height: 0px;
+      z-index: 1000;
+      background-color: #a71435;
+      overflow: hidden;
+      visibility: hidden;
+      transition: 1s;
+      li {
+        margin: 0px 5px;
+      }
+
+      li:first-child {
+        margin-top: 10px;
+      }
+    }
+
+    .navbar-content.active #menu-main {
+      visibility: visible;
+      height: calc(100vh - 70px);
+    }
+  }
+
+  /* ul li {
     display: inline;
 
     & + li {
       margin-left: 70px;
     }
-  }
-
-  ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-  }
+  } */
 `;
 
 export const SectionAbout = styled.div`
@@ -246,6 +311,7 @@ export const SectionAbout = styled.div`
 export const SectionFeature = styled.div`
   background-color: #f9f9f9;
   padding: 70px 0px;
+  overflow: hidden;
 
   .section-container {
     display: flex;
@@ -352,6 +418,7 @@ export const SectionFeature = styled.div`
 export const SectionImages = styled.div`
   padding: 70px 0px;
   text-align: center;
+  overflow: hidden;
 
   h3 {
     font-family: "Oswald", sans-serif;
@@ -387,6 +454,7 @@ export const Section = styled.div`
   display: flex;
   align-items: center;
   min-height: 550px;
+  overflow: hidden;
 
   img {
     margin-top: 20px;
@@ -432,6 +500,7 @@ export const SectionInfo = styled.div`
   min-height: 600px;
   align-items: center;
   padding: 30px 0px;
+  overflow: hidden;
 
   @media (max-width: 575px) {
     align-items: flex-start;

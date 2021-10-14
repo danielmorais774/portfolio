@@ -54,6 +54,7 @@ const data: IData = {
     // youtube: 'https://www.youtube.com/watch?v=aOqJbmwnyzI',
     playstore: 'https://play.google.com/store/apps/details?id=com.dmcode.eitacheidemo',
     tools: ['React Native', 'Laravel', 'ReactJS'],
+    routerName: '/projects/eitachei',
     images: images
 }
 

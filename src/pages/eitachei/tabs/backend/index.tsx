@@ -4,23 +4,19 @@ import { Tab } from "react-bootstrap";
 import { Content } from "./styles";
 
 import imageLaravelIcon from '../../../../assets/images/eitachei-page/laravel-icon.png';
+import imageNodejsIcon from '../../../../assets/images/eitachei-page/nodejs-icon.png';
 
 const backend: React.FC = () => {
   return (
     <Tab.Pane eventKey="backend">
       <Content>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like).
+          O backend foi a stack na qual mais apliquei os meus conhecimentos, desde a modelagem do banco de dados até as integrações com subsistemas. Seu núcleo principal se trata de um monólito em laravel, na qual foi desenvolvida uma api rest e as regras de negócio. Os registros sobre produtos, vendas, saques, empresas e usuários foram salvos em banco de dados relacional e a API se encarrega de buscar e processar esses dados para o app.
         </p>
-        <img src={imageLaravelIcon}/>
+        <div className="row-custom">
+          <img src={imageNodejsIcon} alt="icone nodejs" />
+          <img src={imageLaravelIcon} alt="icone laravel" />
+        </div>
       </Content>
     </Tab.Pane>
   );

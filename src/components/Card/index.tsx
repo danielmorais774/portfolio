@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 
 import { Container } from './styles';
 
-import {FaGithub, FaGooglePlay, FaYoutube} from 'react-icons/fa';
+import {FaGithub, FaGooglePlay, FaYoutube, FaLink} from 'react-icons/fa';
 import {BiSlideshow} from 'react-icons/bi';
 import Lightbox from 'react-image-lightbox';
 
 import 'react-image-lightbox/style.css';
 
 import { IData } from '../../models/IData';
+import { Link } from 'react-router-dom';
 interface ICardProps {
   data: IData;
 }
@@ -58,10 +59,24 @@ const Card: React.FC<ICardProps> = ({data}) => {
                   <FaGooglePlay size={22} color="#fff"/>
                 </button>
               }
+              {data.routerName &&
+                <button className="image-button">
+                <Link to={data.routerName}>
+                  <FaLink size={22} color="#fff"/>
+                  </Link>
+                </button>
+              }
             </div>
           </div>
+
+          {data.routerName ?
+            <Link to={data.routerName || ''}>
+              <h3>{data.title} (Saber mais)</h3>
+            </Link>
+          :
+            <h3>{data.title}</h3>
+          }
           
-          <h3>{data.title}</h3>
           <div className="badge-container">
             {
               data.tools.map((tool, index) => (

@@ -4,5 +4,6 @@ export interface IData{
     youtube?: string;
     github?: string;
     playstore?: string;
+    routerName?: string;
     images: string[];
 }
